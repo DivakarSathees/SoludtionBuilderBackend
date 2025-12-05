@@ -8,6 +8,9 @@ class BoilerplateGeneratorAgent:
     AI-powered boilerplate generator.
     Generates initial folder structure and starter files for the selected stack.
     """
+    LOCAL_TEMPLATES = {
+        "java": "boilerplates/java/springboot_template.zip"
+    }
 
     def __init__(self):
         self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
@@ -89,17 +92,57 @@ Rules:
     # ----------------------------------------------------------------------
     # MAIN METHOD: Generate boilerplate JSON
     # ----------------------------------------------------------------------
-    def generate_boilerplate(self, stack: dict, global_spec: str) -> dict:
-        """
-        stack:
-          - language
-          - framework
-          - docker_image
-          - build_tool
-          - project_type
-        global_spec: The complete user project description
-        """
+#     def generate_boilerplate(self, stack: dict, global_spec: str) -> dict:
+#         """
+#         stack:
+#           - language
+#           - framework
+#           - docker_image
+#           - build_tool
+#           - project_type
+#         global_spec: The complete user project description
+#         """
 
+#         prompt = f"""
+# Generate boilerplate for this project.
+
+# STACK:
+# {json.dumps(stack, indent=2)}
+
+# DESCRIPTION:
+# {global_spec}
+# """ 
+
+#         raw = self._call_model(prompt)
+#         parsed = self._extract_json(raw)
+
+#         if parsed is None:
+#             return {
+#                 "files": [],
+#                 "commands": [],
+#                 "error": "Model output could not be parsed."
+#             }
+
+#         parsed.setdefault("files", [])
+#         parsed.setdefault("commands", [])
+
+#         return parsed
+    def generate_boilerplate(self, stack: dict, global_spec: str) -> dict:
+
+        lang = stack["language"].lower()
+        template_path = self.LOCAL_TEMPLATES.get(lang)
+
+        # If a local template exists → use it, no AI
+        if template_path and os.path.exists(template_path):
+            return {
+                "use_local": True,
+                "zip_path": template_path,
+                "files": [],
+                "commands": ["mvn clean install"],
+                "reason": "Local boilerplate template loaded"
+            }
+
+        # FALLBACK TO AI IF NO TEMPLATE EXISTS
         prompt = f"""
 Generate boilerplate for this project.
 
@@ -115,6 +158,7 @@ DESCRIPTION:
 
         if parsed is None:
             return {
+                "use_local": False,
                 "files": [],
                 "commands": [],
                 "error": "Model output could not be parsed."
@@ -123,4 +167,5 @@ DESCRIPTION:
         parsed.setdefault("files", [])
         parsed.setdefault("commands", [])
 
+        parsed["use_local"] = False
         return parsed

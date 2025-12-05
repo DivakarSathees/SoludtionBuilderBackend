@@ -2,3 +2,4 @@ python3 -m uvicorn main:app --reload --host 0.0.0.0 --port 8080
 .env
 __pycache__/
 https://chatgpt.com/share/6932d174-ce30-8008-b09e-8bf9eefa137b
+ docker build -t solution-builder-java:latest .

@@ -1,7 +1,5 @@
-import os
 import uuid
 import docker
-
 
 STATIC_IMAGE_MAP = {
     "java": "solution-builder-java:latest",
@@ -13,13 +11,14 @@ STATIC_IMAGE_MAP = {
 
 class DockerAgent:
     """
-    DockerAgent now uses STATIC docker images per language.
+    Runs everything INSIDE Docker.
+    No local paths. No volume mounts.
     """
 
     def __init__(self):
         self.client = docker.from_env()
 
-    def create_environment(self, stack: dict, workspace_path: str):
+    def create_environment(self, stack: dict):
         language = stack["language"].lower()
 
         if language not in STATIC_IMAGE_MAP:
@@ -28,43 +27,38 @@ class DockerAgent:
         image = STATIC_IMAGE_MAP[language]
         container_name = f"env_{uuid.uuid4().hex[:10]}"
 
-        workspace_path = os.path.abspath(workspace_path)
-        os.makedirs(workspace_path, exist_ok=True)
-
-        # ---------------------------------------------
-        # LOCAL IMAGE CHECK (NO PULL FROM DOCKERHUB)
-        # ---------------------------------------------
+        # Ensure the local static image exists
         try:
             self.client.images.get(image)
             print(f"🐳 Using local Docker image: {image}")
         except docker.errors.ImageNotFound:
             raise RuntimeError(
-                f"❌ Docker image '{image}' was not found locally.\n"
-                f"Please build it first:\n\n"
-                f"docker build -t {image} -f dockerfiles/{language}/Dockerfile .\n"
+                f"❌ Docker image '{image}' not found locally.\n"
+                f"Build it first using:\n"
+                f"docker build -t {image} dockerfiles/{language}\n"
             )
 
+        # Start container WITHOUT VOLUMES
         container = self.client.containers.run(
             image=image,
             name=container_name,
             command="tail -f /dev/null",
             detach=True,
             tty=True,
-            volumes={workspace_path: {"bind": "/workspace", "mode": "rw"}},
-            working_dir="/workspace"
+            working_dir="/workspace"  # persistent inside container only
         )
 
         return {
             "container_id": container.id,
             "container_name": container_name,
-            "workspace": workspace_path,
+            "workspace": "/workspace",   # always internal path
             "image": image
         }
-
 
     def exec(self, container_id: str, command: str):
         container = self.client.containers.get(container_id)
         exit_code, output = container.exec_run(command)
+
         return {
             "exit_code": exit_code,
             "output": output.decode() if isinstance(output, bytes) else output
@@ -72,14 +66,12 @@ class DockerAgent:
 
     def stop(self, container_id: str):
         try:
-            container = self.client.containers.get(container_id)
-            container.stop()
+            self.client.containers.get(container_id).stop()
         except:
             pass
 
     def remove(self, container_id: str):
         try:
-            container = self.client.containers.get(container_id)
-            container.remove(force=True)
+            self.client.containers.get(container_id).remove(force=True)
         except:
             pass
