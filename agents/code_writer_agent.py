@@ -1,121 +1,118 @@
 import os
 import json
 from groq import Groq
+import re
 
 
 class CodeWriterAgent:
     """
-    AI agent that writes or updates files based on:
-      - global_spec (project description)
-      - selected existing file contents (from scanner)
-      - planner recommendations (files_to_update, files_to_create)
+    AI agent that writes or updates project files using LLM.
+    Now with bulletproof JSON parsing & strict formatting.
     """
 
     def __init__(self):
         self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-        # System instructions
         self.system_prompt = """
 You are an expert senior software engineer.
 
-Your job:
-1. Read the project specification.
-2. Read ONLY the file contents provided.
-3. Read the list of files that need creation or update.
-4. Produce final, complete file contents for each file.
+You MUST respond only with VALID JSON.
+No markdown, no explanations, no comments.
 
-Output ONLY JSON using this format:
+Your JSON format MUST be:
 
 {
   "edits": [
     {
       "path": "relative/path/to/file",
-      "action": "create|update",
-      "content": "FULL content of the file"
+      "action": "create | update",
+      "content": "FULL file content here"
     }
   ]
 }
 
 Rules:
-- ALWAYS output full file content (no diffs).
-- NEVER explain your reasoning.
-- NEVER add comments outside code.
-- NEVER wrap JSON in markdown.
-- If updating a file, rewrite the entire file.
-- For created files, include full valid code.
-- Follow best practices for the detected tech stack.
+- Always output FULL file contents.
+- Never use backticks.
+- Never output text outside JSON.
+- Do not add trailing commas.
 """
 
-    # -------------------------------
-    # Safe JSON extractor
-    # -------------------------------
-    def _extract_json(self, text: str):
-        text = text.strip()
+    # --------------------------------------------------------
+    # JSON CLEANER (removes illegal characters)
+    # --------------------------------------------------------
+    def _clean_json_text(self, text: str):
+        # Remove Markdown code fences
+        text = text.replace("```json", "").replace("```", "")
 
-        # 1. Try direct JSON parse
-        try:
-            return json.loads(text)
-        except:
-            pass
+        # Remove non-breaking spaces, weird unicode
+        text = text.replace("\u0000", "").replace("\ufeff", "")
 
-        # 2. Attempt to locate JSON block
+        # Remove leading/trailing junk before first '{' or after last '}'
         start = text.find("{")
         end = text.rfind("}")
 
         if start != -1 and end != -1:
-            try:
-                return json.loads(text[start:end + 1])
-            except:
-                return None
+            text = text[start:end + 1]
 
-        return None
+        # Remove trailing commas in JSON-like responses
+        text = re.sub(r",\s*}", "}", text)
+        text = re.sub(r",\s*]", "]", text)
 
-    # -------------------------------
-    # Model API call
-    # -------------------------------
+        return text.strip()
+
+    # --------------------------------------------------------
+    # Safe JSON extractor
+    # --------------------------------------------------------
+    def _extract_json(self, text: str):
+        cleaned = self._clean_json_text(text)
+
+        try:
+            return json.loads(cleaned)
+        except Exception as e:
+            print("\n❌ JSON PARSE ERROR:", e)
+            print("RAW OUTPUT:\n", text)
+            print("CLEANED OUTPUT:\n", cleaned)
+            return None
+
+    # --------------------------------------------------------
+    # LLM CALL
+    # --------------------------------------------------------
     def _call_model(self, prompt: str):
         resp = self.client.chat.completions.create(
             model=os.getenv("GROQ_MODEL", "openai/gpt-oss-120b"),
             messages=[
                 {"role": "system", "content": self.system_prompt},
-                {"role": "user", "content": prompt}
+                {"role": "user", "content": prompt},
             ],
-            temperature=0.0,
-            max_completion_tokens=4096
+            temperature=0,
+            max_completion_tokens=8192,
         )
+
         return resp.choices[0].message.content
 
-    # -------------------------------
-    # MAIN METHOD
-    # -------------------------------
-    def generate_solution(self,
-                          global_spec: str,
-                          project_files: dict):
+    # --------------------------------------------------------
+    # MAIN API
+    # --------------------------------------------------------
+    def generate_solution(self, global_spec: str, project_files: dict):
         """
-        project_files = {
-            "files_to_read": [
-                { "path": "...", "content": "..." }
-            ],
-            "files_to_update": [...],
-            "files_to_create": [...]
-        }
+        Generates updates based on planner output + existing files.
         """
 
         prompt = f"""
 PROJECT SPECIFICATION:
 {global_spec}
 
-EXISTING FILE CONTENTS TO READ:
+EXISTING SELECTED FILE CONTENTS:
 {json.dumps(project_files["files_to_read"], indent=2)}
 
-FILES REQUESTED FOR UPDATE:
+FILES THAT MUST BE UPDATED:
 {json.dumps(project_files["files_to_update"], indent=2)}
 
-FILES REQUESTED FOR CREATION:
+FILES THAT MUST BE CREATED:
 {json.dumps(project_files["files_to_create"], indent=2)}
 
-IMPORTANT:
-Return only JSON with the list of file edits.
+IMPORTANT: Output ONLY JSON.
 """
 
         raw = self._call_model(prompt)
@@ -124,7 +121,7 @@ Return only JSON with the list of file edits.
         if parsed is None:
             return {
                 "edits": [],
-                "error": "Could not parse JSON from model output"
+                "error": "Invalid JSON from model. Check logs."
             }
 
         parsed.setdefault("edits", [])

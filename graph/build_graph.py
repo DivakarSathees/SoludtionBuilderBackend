@@ -168,6 +168,8 @@ from agents.boilerplate_generator import BoilerplateGeneratorAgent
 from agents.file_scanner import FileScannerAgent
 from agents.file_planner import FilePlannerAgent
 from agents.code_writer_agent import CodeWriterAgent
+from agents.build_runner import BuildRunnerAgent
+
 
 from utils.docker_file_writer import write_files_in_container
 from utils.docker_zip_loader import load_zip_into_container
@@ -193,6 +195,9 @@ class BuildState(TypedDict, total=False):
     plan: Optional[Dict[str, Any]]
     selected_files: Optional[Any]
     solution: Optional[Dict[str, Any]]
+    build_result: Optional[Dict[str, Any]]
+    build_command_override: Optional[str]
+
 
 
 # -------------------------------------------------------
@@ -204,6 +209,8 @@ boiler_agent = BoilerplateGeneratorAgent()
 scanner_agent = FileScannerAgent()
 planner_agent = FilePlannerAgent()
 writer_agent = CodeWriterAgent()
+runner_agent = BuildRunnerAgent()
+
 
 
 # -------------------------------------------------------
@@ -300,7 +307,7 @@ def generate_boilerplate(state: BuildState) -> BuildState:
 # -------------------------------------------------------
 # NODE 4: Final Scan + Build Response
 # -------------------------------------------------------
-def finalize(state: BuildState) -> BuildState:
+def scan_initial_files(state: BuildState) -> BuildState:
     docker = state["docker"]
     scan = scanner_agent.scan(container_id=docker["container_id"])
 
@@ -378,6 +385,42 @@ def write_solution(state: BuildState) -> BuildState:
         "solution": solution
     }
 
+def run_build(state: BuildState) -> BuildState:
+    docker = state["docker"]
+    stack = state["stack"]
+
+    # The user may have clarified build command manually
+    override_cmd = state.get("build_command_override")
+
+    result = runner_agent.run_build(
+        container_id=docker["container_id"],
+        stack=stack,
+        user_override_cmd=override_cmd
+    )
+
+    # Ask user if build command is unknown
+    if result.get("need_clarification"):
+        return {
+            **state,
+            "need_clarification": True,
+            "question": result["question"],
+            "build_result": None
+        }
+
+    # Otherwise store build result
+    return {
+        **state,
+        "need_clarification": False,
+        "build_result": result
+    }
+
+def finalize(state: BuildState) -> BuildState:
+    """
+    Final output after build.
+    """
+    return state
+
+
 
 # -------------------------------------------------------
 # BUILD LANGGRAPH
@@ -389,10 +432,13 @@ def create_graph():
     graph.add_node("select_stack", select_stack)
     graph.add_node("setup_docker", setup_docker)
     graph.add_node("generate_boilerplate", generate_boilerplate)
-    graph.add_node("finalize", finalize)
+    graph.add_node("scan_initial_files", scan_initial_files)
     graph.add_node("plan_files", plan_files)
     graph.add_node("read_required_files", read_required_files)
     graph.add_node("write_solution", write_solution)
+    graph.add_node("run_build", run_build)
+    graph.add_node("finalize", finalize)
+
 
     # Entry
     graph.set_entry_point("select_stack")
@@ -402,15 +448,24 @@ def create_graph():
         if state.get("need_clarification"):
             return END
         return "setup_docker"
+    
+    def build_or_fix(state: BuildState):
+        if state.get("need_clarification"):
+            return END  # ask user for command override
+        return "finalize"
+
 
     # Edges
     graph.add_conditional_edges("select_stack", ask_or_continue)
     graph.add_edge("setup_docker", "generate_boilerplate")
-    graph.add_edge("generate_boilerplate", "finalize")
-    graph.add_edge("finalize", "plan_files")
+    graph.add_edge("generate_boilerplate", "scan_initial_files")
+    graph.add_edge("scan_initial_files", "plan_files")
     graph.add_edge("plan_files", "read_required_files")
     graph.add_edge("read_required_files", "write_solution")
-    graph.add_edge("write_solution", END)
+    graph.add_edge("write_solution", "run_build")
+    graph.add_conditional_edges("run_build", build_or_fix)
+
+    # graph.add_edge("run_build", "finalize")
 
 
     return graph.compile()
@@ -445,5 +500,6 @@ async def execute_build_graph(prompt: str,
         "boilerplate_project_files": final_state["boilerplate_project_files"],
         "plan": final_state["plan"],
         "selected_files": final_state["selected_files"],
-        "solution": final_state["solution"]
+        "solution": final_state["solution"],
+        "build_result": final_state["build_result"]
     }
