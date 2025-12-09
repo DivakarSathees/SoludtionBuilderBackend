@@ -254,6 +254,41 @@ class BuildRunnerAgent:
         )
 
         return exit_code, output.decode(errors="ignore")
+    
+    def _exec_stream_logs(self, container_id: str, project_root: str, command: str):
+        """
+        Streams logs line-by-line instead of capturing huge outputs into memory.
+        Returns the full log as a single string (but built incrementally).
+        """
+
+        container = self.client.containers.get(container_id)
+
+        # Construct command
+        full_cmd = f"bash -lc \"cd {project_root} && {command}\""
+
+        # Run process (stream=True enables incremental logs)
+        exec_id = self.client.api.exec_create(
+            container_id,
+            full_cmd,
+            stdin=False,
+            stdout=True,
+            stderr=True,
+        )["Id"]
+
+        output_stream = self.client.api.exec_start(exec_id, stream=True)
+
+        logs = []
+
+        for chunk in output_stream:
+            line = chunk.decode(errors="ignore")
+            print(line, end="")   # optional real-time console streaming
+            logs.append(line)
+
+        # Get exit code
+        exit_code = self.client.api.exec_inspect(exec_id)["ExitCode"]
+
+        return exit_code, "".join(logs)
+
 
     # ---------------------------------------------------------
     # Static known build commands
@@ -347,7 +382,9 @@ Output only JSON.
 
         print(f"\n🚀 Running build in: {project_root}\n➡️ {cmd}")
 
-        exit_code, logs = self._exec_in_dir(container_id, project_root, cmd)
+        # exit_code, logs = self._exec_in_dir(container_id, project_root, cmd)
+        exit_code, logs = self._exec_stream_logs(container_id, project_root, cmd)
+
 
         return {
             "success": exit_code == 0,
