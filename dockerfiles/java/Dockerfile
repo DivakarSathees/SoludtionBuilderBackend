@@ -76,5 +76,23 @@ COPY . .
 # --- Expose ---
 EXPOSE 8080 3306
 
+# --- Initialize MariaDB ---
+RUN mkdir -p /run/mysqld && \
+    mkdir -p /var/lib/mysql && \
+    chown -R mysql:mysql /run/mysqld /var/lib/mysql && \
+    mariadb-install-db --user=mysql --ldata=/var/lib/mysql
+
+# --- Set root password ---
+RUN mysqld --user=mysql & sleep 10 && \
+    mariadb -u root -pexamly -e "CREATE USER IF NOT EXISTS 'root'@'127.0.0.1' IDENTIFIED BY 'examly';" && \
+    mariadb -u root -pexamly -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1' WITH GRANT OPTION;" && \
+    mariadb -u root -pexamly -e "FLUSH PRIVILEGES;"
+
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+
+CMD ["/start.sh"]
+
 # --- Start MariaDB + Spring Boot ---
-CMD mysqld_safe & sleep 5 && mvn spring-boot:run
+# CMD ["bash", "-c", "mysqld --user=mysql & sleep 10"]
+

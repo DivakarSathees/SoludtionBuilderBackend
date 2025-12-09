@@ -1,4 +1,4 @@
-python3 -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8080
+python3 -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 .env
 __pycache__/
 https://chatgpt.com/share/6932d174-ce30-8008-b09e-8bf9eefa137b
@@ -8,3 +8,7 @@ docker cp env_5da2f97df1:/workspace/. ./project
 
 apt update
 apt install nano -y
+
+ docker pull mysql:latest
+
+ docker run --name solution-builder-java:latest -e MYSQL_ROOT_PASSWORD=examly -e MYSQL_DATABASE=root -p 3306:3306 -d mysql:latest
