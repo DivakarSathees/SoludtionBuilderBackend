@@ -12,3 +12,5 @@ apt install nano -y
  docker pull mysql:latest
 
  docker run --name solution-builder-java:latest -e MYSQL_ROOT_PASSWORD=examly -e MYSQL_DATABASE=root -p 3306:3306 -d mysql:latest
+
+mysql -h 127.0.0.1 -u appuser -pexamly

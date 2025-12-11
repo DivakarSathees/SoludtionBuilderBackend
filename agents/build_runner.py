@@ -281,7 +281,7 @@ class BuildRunnerAgent:
 
         for chunk in output_stream:
             line = chunk.decode(errors="ignore")
-            print(line, end="")   # optional real-time console streaming
+            # print(line, end="")   # optional real-time console streaming
             logs.append(line)
 
         # Get exit code

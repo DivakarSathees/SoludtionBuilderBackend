@@ -1,9 +1,23 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, FastAPI
 from app.schemas import BuildRequest, BuildResponse
 from graph.build_graph import execute_build_graph
+from fastapi.middleware.cors import CORSMiddleware
+
 
 router = APIRouter()
 
+# ⚡ Enable CORS
+# -----------------------------------------
+
+def apply_cors(app: FastAPI):
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=["*"],  # or ["http://localhost:3000"] in production
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+    return app
 
 # @router.post("/build", response_model=BuildResponse)
 # async def build_project(request: BuildRequest):

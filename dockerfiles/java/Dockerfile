@@ -84,14 +84,21 @@ RUN mkdir -p /run/mysqld && \
 
 # --- Set root password ---
 RUN mysqld --user=mysql & sleep 10 && \
-    mariadb -u root -pexamly -e "CREATE USER IF NOT EXISTS 'root'@'127.0.0.1' IDENTIFIED BY 'examly';" && \
-    mariadb -u root -pexamly -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1' WITH GRANT OPTION;" && \
+    mariadb -u root -pexamly -e "CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'examly';" && \
+    mariadb -u root -pexamly -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;" && \
+    mariadb -u root -pexamly -e "FLUSH PRIVILEGES;" && \
+    mariadb -u root -pexamly -e "CREATE USER IF NOT EXISTS 'appuser'@'%' IDENTIFIED BY 'examly';" && \
+    mariadb -u root -pexamly -e "GRANT ALL PRIVILEGES ON *.* TO 'appuser'@'%' WITH GRANT OPTION;" && \
     mariadb -u root -pexamly -e "FLUSH PRIVILEGES;"
+#     CREATE USER 'appuser'@'%' IDENTIFIED BY 'examly';
+# GRANT ALL PRIVILEGES ON *.* TO 'appuser'@'%' WITH GRANT OPTION;
+# FLUSH PRIVILEGES;
+    
 
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
 
-CMD ["/start.sh"]
+COPY start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+CMD ["/usr/local/bin/start.sh"]
 
 # --- Start MariaDB + Spring Boot ---
 # CMD ["bash", "-c", "mysqld --user=mysql & sleep 10"]

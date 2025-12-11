@@ -20,4 +20,3 @@ for i in {1..20}; do
 done
 
 echo "=== Starting Spring Boot ==="
-exec mvn spring-boot:run
