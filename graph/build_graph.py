@@ -475,7 +475,7 @@ def after_build_branch(state: BuildState):
 def summarize_logs(state: BuildState) -> BuildState:
     print("Summarizing build logs for errors...")
     logs = state.get("build_result", {}).get("logs", "")
-    print("Build logs length:", logs)
+    # print("Build logs length:", logs)
     summ = summ_agent.summarize(logs)
     return {**state, "error_summary": summ.get("error_summary"), "error_block": summ.get("error_block")}
 

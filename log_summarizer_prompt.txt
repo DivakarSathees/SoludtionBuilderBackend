@@ -1,0 +1,569 @@
+--- New Chunk Prompt ---
+
+Below is a segment of filtered build logs.
+Extract ONLY the smallest log block that contains the real failure.
+
+LOG CHUNK:
+ cannot find symbol
+[[1;31mERROR[m]   symbol:   class GeneratedValue
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[11,32] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable GenerationType
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[14,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[17,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[20,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[23,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[26,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[29,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[42,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrePersist
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[48,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PreUpdate
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+--- BLOCK ---
+
+[[1;31mERROR[m]   symbol:   class Id
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[11,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class GeneratedValue
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[11,32] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable GenerationType
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[14,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[17,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[20,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[23,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[26,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[29,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[42,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrePersist
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[48,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PreUpdate
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+--- BLOCK ---
+
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[11,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class GeneratedValue
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[11,32] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable GenerationType
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[14,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[17,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[20,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[23,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[26,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[29,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[42,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrePersist
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[48,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PreUpdate
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+--- BLOCK ---
+
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[11,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class GeneratedValue
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[11,32] cannot find symbol
+[[1;31mERROR[m]   symbol:   variable GenerationType
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[14,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[17,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[20,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[23,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[26,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[29,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Column
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[42,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PrePersist
+[[1;31mERROR[m]   location: class com.examly.springapp.model.BankAccount
+[[1;31mERROR[m] /workspace/springbootproject/springapp/src/main/java/com/examly/springapp/model/BankAccount.java:[48,6] cannot find symbol
+[[1;31mERROR[m]   symbol:   class PreUpdate
+[[1;31mERROR[m]   location: class com
+
+--- End Chunk Prompt ---
+
+--- New Chunk Prompt ---
+
+Below is a segment of filtered build logs.
+Extract ONLY the smallest log block that contains the real failure.
+
+LOG CHUNK:
+]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:193) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:69) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:231) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:199) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:169) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1383) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.18.jar:6.0.18]
+
+--- BLOCK ---
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+	at com.examly.springapp.SpringappApplication.main(SpringappApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.10.jar:3.1.10]
+
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-12-12T09:37:40.863Z  INFO 418 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-12T09:37:40.875Z ERROR 418 --- [  restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.878Z ERROR 418 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.879Z  WARN 418 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.880Z  INFO 418 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-12T09:37:40.919Z  INFO 418 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-12T09:37:40.932Z ERROR 418 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1768) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+
+--- BLOCK ---
+
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+	at com.examly.springapp.SpringappApplication.main(SpringappApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.10.jar:3.1.10]
+
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-12-12T09:37:40.863Z  INFO 418 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-12T09:37:40.875Z ERROR 418 --- [  restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.878Z ERROR 418 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.879Z  WARN 418 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.880Z  INFO 418 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-12T09:37:40.919Z  INFO 418 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationConte
+
+--- End Chunk Prompt ---
+
+--- New Chunk Prompt ---
+
+Below is a segment of filtered build logs.
+Extract ONLY the smallest log block that contains the real failure.
+
+LOG CHUNK:
+xt. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-12T09:37:40.932Z ERROR 418 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1768) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.10.jar:3.1.10]
+
+--- BLOCK ---
+
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+	at com.examly.springapp.SpringappApplication.main(SpringappApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.10.jar:3.1.10]
+
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-12-12T09:37:40.863Z  INFO 418 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-12T09:37:40.875Z ERROR 418 --- [  restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.878Z ERROR 418 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.879Z  WARN 418 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.880Z  INFO 418 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-12T09:37:40.919Z  INFO 418 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-12T09:37:40.932Z ERROR 418 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1768) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.10.jar:3.1.10]
+
+--- BLOCK ---
+
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+	at com.examly.springapp.SpringappApplication.main(SpringappApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.10.jar:3.1.10]
+
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-12-12T09:37:40.863Z  INFO 418 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-12T09:37:40.875Z ERROR 418 --- [  restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.878Z ERROR 418 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.879Z  WARN 418 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.880Z  INFO 418 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-12T09:37:40.919Z  INFO 418 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-12T09:37:40.932Z ERROR 418 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is requ
+
+--- End Chunk Prompt ---
+
+--- New Chunk Prompt ---
+
+Below is a segment of filtered build logs.
+Extract ONLY the smallest log block that contains the real failure.
+
+LOG CHUNK:
+ired with driverClassName.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1768) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+
+--- BLOCK ---
+
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+	at com.examly.springapp.SpringappApplication.main(SpringappApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.10.jar:3.1.10]
+
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-12-12T09:37:40.863Z  INFO 418 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-12T09:37:40.875Z ERROR 418 --- [  restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.878Z ERROR 418 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.879Z  WARN 418 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.880Z  INFO 418 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-12T09:37:40.919Z  INFO 418 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-12T09:37:40.932Z ERROR 418 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1768) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+	at com.examly.springapp.SpringappApplication.main(SpringappApplication.java:10) ~[classes/:na]
+
+--- BLOCK ---
+
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+	at com.examly.springapp.SpringappApplication.main(SpringappApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.10.jar:3.1.10]
+
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-12T09:37:40.397Z  WARN 418 --- [  restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-12-12T09:37:40.863Z  INFO 418 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-12T09:37:40.875Z ERROR 418 --- [  restartedMain] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.878Z ERROR 418 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.879Z  WARN 418 --- [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+2025-12-12T09:37:40.880Z  INFO 418 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-12-12T09:37:40.919Z  INFO 418 --- [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-12T09:37:40.932Z ERROR 418 --- [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [com/examly/springapp/config/DatabaseConfig.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1768) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBe
+
+--- End Chunk Prompt ---
+
+--- New Chunk Prompt ---
+
+Below is a segment of filtered build logs.
+Extract ONLY the smallest log block that contains the real failure.
+
+LOG CHUNK:
+anFactory.java:518) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+	at com.examly.springapp.SpringappApplication.main(SpringappApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+
+--- BLOCK ---
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1168) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+	at com.examly.springapp.SpringappApplication.main(SpringappApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.10.jar:3.1.10]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.0.18.jar:6.0.18]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.18.jar:6.0.18]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:354) ~[spring-orm-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1764) ~[spring-beans-6.0.18.jar:6.0.18]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+	at com.zaxxer.hikari.HikariConfig.validate(HikariConfig.java:1022) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:109) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+
+--- BLOCK ---
+
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:615) ~[spring-context-6.0.18.jar:6.0.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.10.jar:3.1.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.10.jar:3.1.10]
+	at com.examly.springapp.SpringappApplication.main(SpringappApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.10.jar:3.1.10]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.0.18.jar:6.0.18]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.18.jar:6.0.18]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:354) ~[spring-orm-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-6.0.18.jar:6.0.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1764) ~[spring-beans-6.0.18.jar:6.0.18]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: jdbcUrl is required with driverClassName.
+	at com.zaxxer.hikari.HikariConfig.validate(HikariConfig.java:1022) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:109) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:437) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hib
+
+--- End Chunk Prompt ---
+
+--- New Chunk Prompt ---
+
+Below is a segment of filtered build logs.
+Extract ONLY the smallest log block that contains the real failure.
+
+LOG CHUNK:
+ernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.22.Final.jar:6.2.22.Final]
+
+--- End Chunk Prompt ---
+

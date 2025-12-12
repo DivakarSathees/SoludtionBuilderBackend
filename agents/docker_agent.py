@@ -26,6 +26,7 @@ class DockerAgent:
 
         image = STATIC_IMAGE_MAP[language]
         container_name = f"env_{uuid.uuid4().hex[:10]}"
+        print(f"🐳 Creating Docker container '{container_name}' using image '{image}'...")
 
         # Ensure the local static image exists
         try:
